@@ -1,0 +1,10 @@
+venv/
+terraform/
+
+src/main/python/LocalGroup/localSparkJob.py
+
+*.md
+*.pytest_cache
+src/main/python/AnalyseData/.ipynb_checkpoints
+
+docker/local_cluster/

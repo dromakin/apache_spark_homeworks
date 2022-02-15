@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: kstream-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: kstream-app
+  template:
+    metadata:
+      labels:
+        app: kstream-app
+    spec:
+      containers:
+        - name: kstream-app
+          image: acrdromakin.azurecr.io/kstream-app:latest
+          env:
+            - name: APPLICATION_ID
+              value: kstream-app
+            - name: BOOTSTRAP_SERVERS
+              value: kafka:9092
+            - name: SCHEMA_REGISTRY_URL
+              value: schemaregistry:8081
+            - name: INPUT_TOPIC_NAME
+              value: expedia
+            - name: OUTPUT_TOPIC_NAME
+              value: expedia_ext

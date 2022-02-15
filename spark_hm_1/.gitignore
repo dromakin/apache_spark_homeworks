@@ -1,0 +1,30 @@
+*.class
+*.log
+
+# idea
+/.idea
+/target
+*.iml
+
+.venv/
+venv/
+venv_p/
+dist/
+*.egg-info/
+build/
+
+*.pytest_cache
+*.ipynb_checkpoints
+
+environments
+docker/azure_cluster/spark-env.sh
+*.env
+.env
+
+
+data/hotels/
+data/weather/
+data/DataDescription.md
+
+### Mac ###
+.DS_Store
